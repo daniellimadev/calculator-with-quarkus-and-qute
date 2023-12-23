@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Quarkus Calculator</title>
+    <link rel="stylesheet" href="page.css" />
+</head>
+
+<body>
+<main class="container">
+    <div class="calculator">
+        <form
+                class="content"
+                action="/calculator"
+                method="POST"
+                name="todoForm"
+                enctype="application/x-www-form-urlencoded"
+        >
+            <div class="input-calcuate">
+                <div class="inputs">
+                    <label for="number1">Enter the first number</label>
+                    <input
+                            class="input-content"
+                            type="number"
+                            name="firstNumber"
+                            class="form-control"
+                            id="number1"
+                            placeholder="First number"
+                            required
+                    />
+                    <br />
+                    <label for="number2">Enter the second number</label>
+                    <input
+                            class="input-content"
+                            type="number"
+                            name="secondNumber"
+                            class="form-control"
+                            id="number2"
+                            placeholder="Second value"
+                            required
+                    />
+                    <br />
+                </div>
+                <div class="inputs">
+                    <select class="input-content" name="operation">
+                        <option disabled value="">Operation</option>
+                        {#for operation in dataDTO.arithmeticOperations}
+                                <option value="{operation}">{operation}</option>
+                        {/for}
+                    </select>
+                </div>
+                <button class="btn-calculate" type="submit">Calculate</button>
+            </div>
+        </form>
+    </div>
+</main>
+<div class="bottom-text">
+    <p>Page created using Quarkus RESTEasy & Qute🚀🚀</p>
+</div>
+</body>
+</html>

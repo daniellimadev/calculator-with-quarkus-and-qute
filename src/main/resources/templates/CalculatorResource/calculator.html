@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Calculadora Bala</title>
+    <link rel="stylesheet" href="page.css" />
+</head>
+
+<body>
+<main class="container">
+    <div class="input-calculate">
+        <form class="content" action="/calculator" method="GET" name="todoForm">
+            <div class="input-calculate">
+                <div class="result">
+                    <h2>
+                        Daniel <br />
+                        <b>Calculator</b>
+                    </h2>
+                    <p>Result is <b>{dataDTO.result.formatSign}</b></p>
+                </div>
+                <button class="btn-calculate-b" type="submit">To go back</button>
+            </div>
+        </form>
+    </div>
+</main>
+<div class="bottom-text">
+    <p>Page created using Quarkus RESTEasy & Qute🚀🚀</p>
+</div>
+</body>
+</html>
